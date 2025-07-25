@@ -1,0 +1,50 @@
+@use "../../styles/helpers" as *;
+
+.header {
+  padding: rem(10) fluid(76, 10);
+  margin-top: fluid(115, 35);
+  background-color: var(--color-light);
+
+  &__wrapper {
+    display: contents;
+
+    @include laptop {
+      display: flex;
+      align-items: center;
+      column-gap: 3rem;
+    }
+
+    @include tablet {
+      column-gap: 1.5rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__authButtons {
+    display: flex;
+    column-gap: rem(5);
+  }
+
+  &__item {
+    &:last-child {
+      display: none;
+    }
+
+    @include laptop {
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:last-child {
+        display: flex;
+      }
+    }
+  }
+}

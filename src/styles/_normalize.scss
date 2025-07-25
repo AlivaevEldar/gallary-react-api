@@ -1,0 +1,108 @@
+/* ==== Глобальный сброс и нормализация ==== */
+
+/* Глобальный box-sizing и сброс margin/padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Установка базовых шрифтов и улучшение читаемости */
+html {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/* Базовые стили для body */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Удаление стилей у списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Удаление стилей у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Элементы формы: наследуют шрифт */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Кнопки: курсор */
+button {
+  cursor: pointer;
+}
+
+/* Изображения: адаптивные */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Таблицы: без отступов между ячейками */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Удаление кавычек у цитат */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+/* HTML5-блочные элементы */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figure,
+figcaption,
+details,
+summary {
+  display: block;
+}
+
+/* Наследование box-sizing даже в слоте iframe, Shadow DOM и т.д. */
+:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}

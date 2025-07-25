@@ -1,0 +1,15 @@
+@use "../../styles/helpers" as *;
+
+.p {
+  font-size: rem(18);
+  color: var(--color-light);
+  text-align: center;
+  margin-top: rem(40);
+
+  @include tablet {
+    margin: rem(25);
+  }
+  @include mobile {
+    font-size: rem(16);
+  }
+}

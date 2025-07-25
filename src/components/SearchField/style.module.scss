@@ -1,0 +1,32 @@
+@use "../../styles/helpers" as *;
+
+.searchField {
+  display: inline-grid;
+  align-items: center;
+  column-gap: rem(9);
+  grid-template-columns: auto minmax(180px, 23vw) auto;
+  padding: rem(1) rem(1) rem(1) rem(12);
+  border-radius: rem(18);
+  background-color: var(--color-light);
+
+  &__icon {
+    flex-grow: 0;
+  }
+
+  &__placeholder {
+    &::placeholder {
+      color: #4A4A4A;
+      font-size: rem(11);
+    }
+  }
+}
+
+.searchFieldInner {
+  margin-top: rem(35);
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    margin-top: rem(20);
+  }
+}
