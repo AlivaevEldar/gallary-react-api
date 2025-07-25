@@ -2,15 +2,13 @@ import { useEffect, useState } from "react";
 import Card from "../Card.jsx/Card";
 import styles from "./style.module.scss";
 
-const baseUrl = "https://api.unsplash.com";
-const accessKey = "w6ZU1mHlijAk4nTvyGt2v-rk2EjRuSdavQ66qZaXLX0";
 
 function Gallary() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseUrl}/photos/random?count=9&client_id=${accessKey}`)
+    fetch(`${BASE_URL}/photos/random?count=9&client_id=${ACCESS_KEY}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
