@@ -56,11 +56,9 @@ function Gallary({ searchQuery }) {
         <h1 className={styles.gallary__title}>EXPLORE MOST POPULAR UPLOADS</h1>
 
         <div className={styles.gallary__body}>
-          {isLoading ? (
-            <Skeleton />
-          ) : (
-            data.map((item) => <Card key={item.id} data={item} />)
-          )}
+          {isLoading
+            ? [...Array(9)].map((_, index) => <Skeleton key={index} />)
+            : data.map((item) => <Card key={item.id} data={item} />)}
         </div>
 
         <Button
