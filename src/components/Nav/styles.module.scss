@@ -1,0 +1,14 @@
+@use "../../styles/helpers" as *;
+
+.nav {
+  &__list {
+    display: flex;
+    column-gap: rem(26);
+  }
+
+  &__link {
+    color: var(--color-surface-accent);
+    text-decoration: none;
+    font-size: rem(15);
+  }
+}

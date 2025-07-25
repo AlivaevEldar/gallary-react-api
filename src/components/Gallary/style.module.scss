@@ -1,0 +1,38 @@
+@use "../../styles/helpers" as *;
+
+.gallary {
+  display: grid;
+  justify-items: center;
+  row-gap: rem(15);
+  background-color: var(--color-light);
+  padding: rem(89) rem(19);
+
+  &__title {
+    text-align: center;
+    width: fit-content;
+    font-size: rem(35);
+    font-weight: 700;
+    color: var(--color-title);
+    position: relative;
+    text-decoration: underline;
+
+    @include mobile {
+      font-size: rem(25);
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(50);
+    column-gap: rem(16);
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(35);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

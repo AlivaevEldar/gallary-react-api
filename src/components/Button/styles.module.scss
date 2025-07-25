@@ -1,0 +1,56 @@
+@use "../../styles/helpers/" as *;
+
+.button {
+  border-radius: rem(6);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium {
+  font-size: rem(15);
+  min-width: rem(130);
+  height: rem(40);
+
+  @include mobile {
+    font-size: rem(11);
+    min-width: rem(105);
+    height: rem(32);
+  }
+  
+  @include mobile-s {
+    min-width: rem(85)
+  }
+}
+
+.small {
+  font-family: var(--font-search-button);
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: rem(10) rem(15);
+  border-radius: rem(5) rem(18) rem(18) rem(5);
+  font-size: rem(12);
+}
+
+.pulledOut {
+  font-size: rem(10);
+  min-width: rem(154);
+  height: rem(30);
+}
+
+.LogIn {
+  color: var(--color-surface-accent);
+  border: rem(1) solid var(--color-surface-accent);
+}
+
+.SignUp {
+  color: var(--color-light);
+  background-color: var(--color-surface-accent);
+}
+
+.search {
+  color: var(--color-light);
+  background-color: var(--color-surface-accent);
+}

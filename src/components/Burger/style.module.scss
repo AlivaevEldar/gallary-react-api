@@ -1,0 +1,28 @@
+@use "../../styles/helpers" as *;
+
+.burger {
+  display: grid;
+  justify-items: end;
+  row-gap: rem(2);
+  width: rem(25);
+  height: rem(25);
+
+  @include mobile-s {
+    width: rem(20);
+    height: rem(20)
+  }
+
+  &.isActive {
+    display: none;
+  }
+
+  &__line {
+    background-color: black;
+    height: rem(3);
+    width: 100%;
+
+    &:last-child {
+      width: 50%;
+    }
+  }
+}

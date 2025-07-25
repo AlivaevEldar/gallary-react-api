@@ -1,0 +1,15 @@
+@use "./helpers" as *;
+
+:root {
+  --font-primary: "nobile";
+  --font-search-button: "quicksand";
+  --font-count-likes: "nokora";
+
+  --color-surface-accent: #ff4646;
+  --color-light: #ffffff;
+  --color-title: #675656;
+  --color-description: #4A3535;
+
+  --container-width: #{rem(1100)};
+  --container-padding-x: #{rem(10)};
+}
